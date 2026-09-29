@@ -181,7 +181,7 @@ const BookingCardInfo = ({ booking, isEditing, newStatus, onStatusChange }) => (
     </div>
     <div className="text-center">
       <div className={BookingPageStyles.bookingInfoLabel}>Amount</div>
-      <div className={BookingPageStyles.bookingAmount}>${booking.amount}</div>
+      <div className={BookingPageStyles.bookingAmount}>Rs{booking.amount}</div>
     </div>
     <div className="text-center">
       <div className={BookingPageStyles.bookingInfoLabel}>Status</div>
