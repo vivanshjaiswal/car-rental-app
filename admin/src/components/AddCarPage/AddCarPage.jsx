@@ -240,14 +240,13 @@ const AddCarPage = () => {
       type: "input",
       config: {
         name: "dailyPrice",
-        label: "Daily Price ($)",
+        label: "Daily Price (₹)",
         type: "number",
         required: true,
         min: "1",
         placeholder: "45",
         props: { className: "pl-8" },
-        prefix: <span className="absolute left-3 top-3 text-gray-400">$</span>,
-      },
+prefix: <span className="absolute left-3 top-3 text-gray-400">₹</span>,      },
     },
     {
       type: "select",
