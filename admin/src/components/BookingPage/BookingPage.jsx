@@ -277,7 +277,7 @@ const BookingCardDetails = ({ booking }) => (
         <Detail
           icon={<FaCreditCard />}
           label="Total Amount"
-          value={`$${booking.amount}`}
+        value={`₹${booking.amount}`}
         />
       </Panel>
 
