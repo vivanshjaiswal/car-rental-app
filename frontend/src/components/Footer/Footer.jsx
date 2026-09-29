@@ -77,15 +77,15 @@ const Footer = () => {
             <ul className={styles.contactList}>
               <li className={styles.contactItem}>
                 <FaMapMarkerAlt className={styles.contactIcon} />
-                <span>123 Drive Avenue, Auto City, CA 90210</span>
+                <span>Knowledge Park II ,Greater Noida,Uttar Pradesh 201310</span>
               </li>
               <li className={styles.contactItem}>
                 <FaPhone className={styles.contactIcon} />
-                <span>+91 8299431275</span>
+                <span>+91 9935797288</span>
               </li>
               <li className={styles.contactItem}>
                 <FaEnvelope className={styles.contactIcon} />
-                <span>info@hexagonsservices.com</span>
+                <span>vivanshhjaiswall@gmail.com</span>
               </li>
             </ul>
             <div className={styles.hoursContainer}>
@@ -129,12 +129,12 @@ const Footer = () => {
           <p>© {new Date().getFullYear()} KARZONE. All rights reserved.</p>
           <p className="mt-3 md:mt-0">
             Designed by <a 
-              href="https://hexagondigitalservices.com" 
+              href="https://github.com/vivanshjaiswal" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={styles.designerLink}
             >
-              Hexagon Digital Services
+              Vivansh Jaiswal
             </a>
           </p>
         </div>
