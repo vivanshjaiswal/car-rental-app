@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AddCarPageStyles, toastStyles } from "../../assets/dummyStyles";
 
-const baseURL = "http://localhost:5000";
+const baseURL = import.meta.env.VITE_API_URL;
 const api = axios.create({ baseURL });
 
 const AddCarPage = () => {
