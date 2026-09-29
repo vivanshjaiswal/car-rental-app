@@ -310,7 +310,7 @@ const CarDetailPage = () => {
 
             <h1 className={carDetailStyles.carName}>{car.make}</h1>
             <p className={carDetailStyles.carPrice}>
-              ${price}{" "}
+              ₹{price}{" "}
               <span className={carDetailStyles.pricePerDay}>/ day</span>
             </p>
 
@@ -658,7 +658,7 @@ const CarDetailPage = () => {
                 <div className={carDetailStyles.priceBreakdown}>
                   <div className={carDetailStyles.priceRow}>
                     <span>Rate/day</span>
-                    <span>${price}</span>
+                    <span>₹{price}</span>
                   </div>
                   {formData.pickupDate && formData.returnDate && (
                     <div className={carDetailStyles.priceRow}>
