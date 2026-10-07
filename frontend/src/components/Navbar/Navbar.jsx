@@ -253,28 +253,41 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className={styles.userActions}>
-                {isLoggedIn ? (
-                  <button
-                    onClick={handleLogout}
-                    className={styles.authButton}
-                    aria-label="Logout"
-                    title={user?.name || "Logout"}
-                  >
-                    <FaSignOutAlt className="text-base" />
-                    <span className={styles.authText}>Logout</span>
-                  </button>
-                ) : (
-                  <Link
-                    to="/login"
-                    className={styles.authButton}
-                    aria-label="Login"
-                  >
-                    <FaUser className="text-base" />
-                    <span className={styles.authText}>Login</span>
-                  </Link>
-                )}
-              </div>
+            <div className={styles.userActions}>
+
+  <a
+    href="http://localhost:5174/login"
+    className={styles.authButton}
+  >
+    <span className={styles.authText}>Admin Panel </span>
+  </a>
+
+  {isLoggedIn ? (
+
+    <button
+      onClick={handleLogout}
+      className={styles.authButton}
+      aria-label="Logout"
+      title={user?.name || "Logout"}
+    >
+      <FaSignOutAlt className="text-base" />
+      <span className={styles.authText}>Logout</span>
+    </button>
+
+  ) : (
+
+    <Link
+      to="/login"
+      className={styles.authButton}
+      aria-label="Login"
+    >
+      <FaUser className="text-base" />
+      <span className={styles.authText}>Login</span>
+    </Link>
+
+  )}
+
+</div>
 
               <div className="md:hidden flex items-center">
                 <button

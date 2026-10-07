@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X, PlusCircle, CalendarCheck, Car } from "lucide-react";
 import logo from "../../assets/logocar.png";
 import { navbarStyles as s } from "../../assets/dummyStyles";
@@ -11,11 +11,19 @@ const navLinks = [
   { path: "/bookings", icon: CalendarCheck, label: "Bookings" },
 ];
 
+
 const Navbar = () => {
+   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
   const buttonRef = useRef(null);
+  
+  
+  const handleLogout = () => {
+  sessionStorage.removeItem("adminToken");
+  navigate("/login");
+};
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -58,6 +66,12 @@ const Navbar = () => {
               </Link>
 
               <div className={s.desktopNav}>
+                <button
+  onClick={handleLogout}
+  className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition"
+>
+  Logout
+</button>
                 <div className={s.navLinksContainer}>
                   {navLinks.map((link, i) => {
                     const Icon = link.icon;

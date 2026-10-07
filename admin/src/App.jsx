@@ -4,17 +4,45 @@ import { Routes, Route } from 'react-router-dom';
 import AddCar from './pages/AddCar/AddCar';
 import ManageCar from './pages/ManageCar/ManageCar';
 import Booking from './pages/Booking/Booking';
+import Login from './pages/login/login';
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
+import Register from './pages/Register/Register';
 
 const App = () => {
   return (
     <>
+
+   
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/" element={<AddCar />} />
-        <Route path="/manage-cars" element={<ManageCar />} />
-        <Route path="/bookings" element={<Booking />} />
-        {/* Add more routes as needed */}
-      </Routes>
+  <Route path="/login" element={<Login />} />
+ <Route path='/register' element={<Register/>}/>
+  <Route
+    path="/"
+    element={
+      <ProtectedRoute>
+        <AddCar />
+      </ProtectedRoute>
+    }
+  />
+
+  <Route
+    path="/manage-cars"
+    element={
+      <ProtectedRoute>
+        <ManageCar />
+      </ProtectedRoute>
+    }
+  />
+
+  <Route
+    path="/bookings"
+    element={
+      <ProtectedRoute>
+        <Booking />
+      </ProtectedRoute>
+    }
+  />
+</Routes>
     </>
   )
 }
