@@ -24,8 +24,8 @@ const Register = () => {
     try {
       setLoading(true);
 
-      const response = await fetch(
-        "http://localhost:5000/api/auth/admin-register",
+     const response = await fetch(
+  `${import.meta.env.VITE_API_URL}/api/auth/admin-register`,
         {
           method: "POST",
           headers: {
