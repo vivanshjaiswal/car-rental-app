@@ -40,7 +40,7 @@ const ContactPage = () => {
       `Phone: ${formData.phone}%0A` +
       `Car Type: ${formData.carType}%0A` +
       `Message: ${formData.message}`;
-    window.open(`https://wa.me/+918299431275?text=${whatsappMessage}`, '_blank');
+    window.open(`https://wa.me/+919935797288?text=${whatsappMessage}`, '_blank');
 
     setFormData({ name: '', email: '', phone: '', carType: '', message: '' });
   };
@@ -104,8 +104,8 @@ const ContactPage = () => {
 
               <div className={styles.infoItemContainer}>
                 {[
-                  { icon: FaWhatsapp, label: 'WhatsApp', value: '+91 8299431275', color: 'bg-green-900/30' },
-                  { icon: FaEnvelope, label: 'Email', value: 'contact@hexagonsservices.com', color: 'bg-orange-900/30' },
+                  { icon: FaWhatsapp, label: 'WhatsApp', value: '+91 9935797288', color: 'bg-green-900/30' },
+                  { icon: FaEnvelope, label: 'Email', value: 'vivanshhjaiswal.com', color: 'bg-orange-900/30' },
                   { icon: FaClock, label: 'Hours', value: 'Mon-Sat: 8AM-8PM', color: 'bg-orange-900/30' },
                 ].map((info, i) => (
                   <div 
