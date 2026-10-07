@@ -256,9 +256,13 @@ const Navbar = () => {
             <div className={styles.userActions}>
 
   <a
-    href="http://localhost:5174/login"
-    className={styles.authButton}
-  >
+  href={
+    import.meta.env.DEV
+      ? "http://localhost:5174/login"
+      : "https://car-rental-app-otb1-five.vercel.app/login"
+  }
+  className={styles.authButton}
+>
     <span className={styles.authText}>Admin Panel </span>
   </a>
 
